@@ -6,6 +6,7 @@ branches:
 cache: node_modules # кеширование
 install:
   - npm install # команда установки зависимостей
+  - nvm use 14
 build: off
 test_script:
   - npm run lint && npm test # скрипт сборки
