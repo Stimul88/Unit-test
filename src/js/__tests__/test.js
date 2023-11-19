@@ -1,11 +1,10 @@
 import getHealthy, { sortingHero } from '../basic.js';
 
 const heroArray = [
-  {name: 'мечник', health: 10},
-  {name: 'маг', health: 100},
-  {name: 'лучник', health: 80},
-]
-
+  { name: 'мечник', health: 10 },
+  { name: 'маг', health: 100 },
+  { name: 'лучник', health: 80 },
+];
 
 test('healthy test', () => {
   const result = getHealthy({ name: 'мечник', health: 51 });
@@ -22,14 +21,11 @@ test('critical test', () => {
   expect(result).toBe('critical');
 });
 
-
 test('sorted test', () => {
-  const result = sortingHero(heroArray);
-  expect(result).toEqual([
-    {name: 'маг', health: 100},
-    {name: 'лучник', health: 80},
-    {name: 'мечник', health: 10},
+  sortingHero(heroArray);
+  expect(heroArray).toEqual([
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'мечник', health: 10 },
   ]);
 });
-
-
